@@ -1,0 +1,185 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>PORTFOLIO | Muroi Suzu</title>
+<link href="css/style.css" rel="stylesheet" type="text/css">
+<link href="css/bootstrap-3.4.1.css" rel="stylesheet" type="text/css">
+<link rel="icon" type="image/png" href="./img/kao.png">
+</head>
+<body>
+
+<!-- 共通ヘッダー -->
+<header> 
+  <a href="suzzy.html" class="logo">PORTFOLIO</a>
+  
+</header>
+
+<main>
+    <h1 >WEBデザイン演習</h1>
+    <h3>サイト名とリンク</h3>
+    <a href="suzzy.html" class="link">PORTFOLIO | MuroiSuzu<br>こちらから</a>
+    <h3>主な対象ユーザー</h3>
+    <p>企業の採用担当者</p>
+    <h3>デザイン面で工夫したこと</h3>
+    <ul>
+        <li>色の統一感</li>
+        <li>作品・キャラクター一覧をきれいに配列</li>
+       </ul>
+    <h3>技術面で工夫したこと</h3>
+    <ul>
+    <li>トップページのキャラクターを動かすこと</li>
+    <li>カーソルの形を変更した</li>
+    <li>作品紹介部分のポップアップ表示</li>
+    </ul>    
+</main>
+  <style>
+    @charset "utf-8";
+
+/* =========================================
+       基本設定・リセット
+    ========================================= */
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+body {
+  font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+  color: #333;
+  background-color: #fafafa;
+  line-height: 1.6;
+  /* 固定ヘッダーの高さ分、上部に余白を設ける */
+  padding-top: 80px;
+}
+a {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+ul {
+  list-style: none;
+}
+main{
+      text-align: center;
+    }
+    /* =========================================
+       固定ナビゲーション (ヘッダー)
+    ========================================= */
+header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 80px;
+  background-color: #fff;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 50px;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.05);
+  z-index: 1000;
+}
+.logo {
+  font-size: 24px;
+  font-weight: bold;
+  letter-spacing: 2px;
+  color: #333;
+}
+nav > ul {
+  display: flex;
+  gap: 40px;
+  height: 100%;
+  align-items: center;
+}
+nav > ul > li {
+  position: relative;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+nav a.nav-main {
+  font-weight: bold;
+  font-size: 16px;
+  text-transform: uppercase;
+  transition: color 0.3s;
+}
+nav a.nav-main:hover, nav a.nav-main.active {
+  color: #ff9f43; /* ポップなアクセントカラー */
+}
+/* ドロップダウンメニュー */
+.dropdown-menu {
+  display: none;
+  position: absolute;
+  top: 80px; /* ヘッダーの高さ */
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: #fff;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  padding: 10px 0;
+  min-width: 150px;
+  text-align: center;
+}
+/* Workにホバーした時にドロップダウンを表示 */
+.dropdown:hover .dropdown-menu {
+  display: block;
+  animation: fadeInDown 0.3s ease;
+}
+.dropdown-menu li {
+  padding: 10px 20px;
+}
+.dropdown-menu a {
+  font-size: 14px;
+  font-weight: bold;
+  color: #555;
+  display: block;
+  transition: color 0.3s;
+}
+.dropdown-menu a:hover {
+  color: #ff9f43;
+}
+    
+    .link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 28px;
+  background-color: #3498db;
+  color: #ffffff;
+  font-weight: bold;
+  font-size: 1.25rem;
+  text-decoration: none;
+  border-radius: 45px;
+  box-shadow: 0 4px 12px rgba(52, 152, 219, 0.3);
+  transition: all 0.3s ease;
+}
+
+.link:hover {
+  background-color: #2980b9;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(52, 152, 219, 0.4);
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translate(-50%, -10px);
+  }
+  to {
+    opacity: 1;
+    transform: translate(-50%, 0);
+  }
+}
+  </style>
+
+<footer>
+  <div class="footer">&copy;Muroi Suzu</div>
+</footer>
+
+<script src="js/jquery-3.7.1.min.js"></script> 
+<script src="js/bootstrap-3.4.1.js"></script> 
+<script src="./js/script.js"></script>
+</body>
+</html>
