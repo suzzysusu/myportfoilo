@@ -183,21 +183,45 @@
   <section class="top-section">
     <h2 class="section-title">Buddy</h2>
     <p class="section-subtitle">オリジナルキャラクターのご紹介</p>
+       <div class="buddy-grid">
 
-    <div class="buddy-grid">
-      <div class="buddy-card">
-        <img src="./img/okome-17.png" alt="キャラクター1" class="buddy-img">
-        <div class="buddy-title">お米
-        </div>
-      </div>
-      <div class="buddy-card">
-        <img src="./img/okome-18.png" alt="キャラクター2" class="buddy-img">
-        <div class="buddy-title">おにぎり</div>
-      </div>
-      <div class="buddy-card">
-        <img src="./img/piko.png" alt="ピコルン" class="buddy-img">
-        <div class="buddy-title">ピコルン</div>
-      </div>
+    <!--おこめ-->
+<div class="buddy-card" 
+     data-title="お米"
+     data-site-url="https://youtu.be/fbB2wa0hrbE"
+     data-images="./img/okome-17.png,./img/okome1.jpg,./img/okome2.jpg"
+     data-desc="<h3 class='article-info-title'>アニメで誕生</h3><p>お米たちのお散歩<br>おこめはたくさんの家族がいて行列を作って移動していく。<Br>
+                アニメ内でお米たちが合体しておにぎりになってしまう。</p>">
+  <img src="./img/okome-17.png" alt="kome" class="buddy-img">
+  <div class="buddy-name">お米</div>
+  <div class="buddy-desc">いつもみんなで行列を作って移動している。</div>
+</div>
+      
+      <!--おにぎり-->
+<div class="buddy-card" 
+     data-title="おにぎり"
+     data-site-url="https://youtu.be/fbB2wa0hrbE"
+     data-images="./img/okome-18.png,./img/onigiri1.jpg,./img/onigiri2.jpg"
+     data-desc="<h3 class='article-info-title'>アニメで誕生</h3><p>お米がくっつくことによって誕生<Br>
+                すぐに転がってしまう</p>">
+  <img src="./img/okome-18.png" alt="kome" class="buddy-img">
+  <div class="buddy-name">おにぎり</div>
+  <div class="buddy-desc">すぐに転がってしまう</div>
+</div>
+
+        <!--piko-->
+<div class="buddy-card" 
+     data-title="ピコルン"
+     data-site-url="https://store.line.me/stickershop/product/33862910/ja"
+     data-images="./img/piko.png,./img/space.png,./img/good.png,./img/thank.png"
+     data-desc="<h3 class='article-info-title'>LINEスタンプ</h3><p> 遠い星「ピコラ星」からやってきた小さな宇宙人。<br>
+              お腹についているのは、宇宙服に内蔵された「マルチコントロールパネル」。翻訳・通信・エネルギー管理などができる高性能装置だけど、ピコルン自身はまだ使いこなせていない。<br>
+              好奇心旺盛で、人間の文化や言葉を学ぶのが大好き。ときどき操作を間違えて、へんてこなリアクションをしてしまうことも。
+              <br>口はないけど、表情と動きで気持ちを全力表現するタイプ。</p>">
+  <img src="./img/piko.png" alt="piko" class="buddy-img">
+  <div class="buddy-name">ピコルン</div>
+  <div class="buddy-desc">遠い星・ピコラ星からやってきた宇宙人</div>
+</div>
     </div>
 
     <div class="btn-container">
@@ -221,6 +245,7 @@
         <button class="slide-btn next" id="modal-next">&#10095;</button>
         <div class="slide-dots" id="modal-slide-dots"></div>
       </div>
+        
 
       <!-- 詳細本文 -->
       <div class="detail-body">
